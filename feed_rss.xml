@@ -6,15 +6,13 @@ layout: null
 <rss version="2.0">
 
     <channel>
-        <title>{{ site.title }}</title>
+        <title>{{ site.name }}</title>
         <link>https://redirector.eservice.emarsys.net/ui/latest/doc/release-notes.html</link>
         <description>{{ site.description }}</description>
         <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
         {% for post in site.posts %}
         <item>
-			<title>
-				{{ post.title }}
-			</title>
+			<title>{{ post.title }}</title>
             <description>
                 {{ post.content | escape }}
             </description>
