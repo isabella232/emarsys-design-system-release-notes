@@ -5,7 +5,8 @@ layout: null
 "items": [
     {% for post in site.posts limit:1 %}
         {
-            "date_published": "{{ post.date | date_to_xmlschema }}",
+            "id": "{{ post.id }}",
+            "date_published": "{{ post.date | date_to_xmlschema }}"
         }{% if forloop.last == false %},{% endif %}
     {% endfor %}
     ]
